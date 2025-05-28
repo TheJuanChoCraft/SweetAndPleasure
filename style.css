@@ -1,0 +1,273 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.delius-swash-caps-regular {
+  font-family: "Delius Swash Caps", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: #fff8f2;
+  color: #5d4037;
+  line-height: 1.6;
+}
+
+/* Clase base para Outfit si la necesitas */
+.outfit-regular {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Encabezado */
+header {
+  text-align: center;
+  padding: 2rem;
+  background-color: #ffe0b2;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+}
+
+/* Secciones */
+section {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Lista del evento */
+.evento ul {
+  list-style: none;
+  padding: 0;
+}
+
+.evento li {
+  margin-bottom: 0.5rem;
+}
+
+/* Galería */
+.galeria .imagenes {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.galeria img {
+  border-radius: 8px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: auto;
+  padding: 1rem;
+  background: #fff3e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+input, button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #ff7043;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e64a19;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #ffe0b2;
+  font-size: 0.9rem;
+}
+
+/* 📱 Media Queries */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .galeria img {
+    width: 100px;
+    height: 100px;
+  }
+
+  form {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 1rem 0.5rem;
+  }
+
+  .galeria img {
+    width: 90px;
+    height: 90px;
+  }
+
+  input, button {
+    font-size: 0.9rem;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #ff7043;
+}
+
+.info, .cronograma, .publicaciones {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: auto;
+  background: #fff3e0;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.info p, .cronograma li {
+  margin-bottom: 0.5rem;
+}
+
+.cronograma ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.publicaciones table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.publicaciones th, .publicaciones td {
+  padding: 0.75rem;
+  border: 1px solid #d7ccc8;
+  text-align: center;
+}
+
+.publicaciones th {
+  background-color: #ffe0b2;
+  color: #5d4037;
+}
+
+@media (max-width: 600px) {
+  .publicaciones table, .publicaciones thead, .publicaciones tbody, .publicaciones th, .publicaciones td, .publicaciones tr {
+    display: block;
+  }
+
+  .publicaciones tr {
+    margin-bottom: 1rem;
+  }
+
+  .publicaciones td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  .publicaciones td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .publicaciones thead {
+    display: none;
+  }
+
+  /* Más espacio lateral en móvil para separar los cuadros de los bordes */
+  .info, .cronograma, .publicaciones {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    margin-left: 1.7rem;
+    margin-right: 1.7rem;
+  }
+}
+
+.cards-publicaciones {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background-color: #ffe0b2;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card p {
+  margin: 0.3rem 0;
+}
+
+/* 🍭 Diseño responsivo: tarjetas en columna en móvil, en filas en pantallas más grandes */
+@media (min-width: 600px) {
+  .cards-publicaciones {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .cards-publicaciones {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
