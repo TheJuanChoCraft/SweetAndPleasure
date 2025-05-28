@@ -14,7 +14,7 @@
 
 body {
   font-family: 'Outfit', sans-serif;
-  background: #fff8f2;
+  background: #7ec6e3;
   color: #5d4037;
   line-height: 1.6;
 }
@@ -31,12 +31,13 @@ body {
 header {
   text-align: center;
   padding: 2rem;
-  background-color: #ffe0b2;
+  background-color: #a48fdc;
+  color: #fff;
 }
 
 header h1 {
   margin-bottom: 0.5rem;
-  font-size: 2.2rem;
+  font-size: 3rem;
 }
 
 /* Secciones */
@@ -65,6 +66,7 @@ section {
 }
 
 .galeria img {
+  border: 3px solid #c6a4e7;
   border-radius: 8px;
   width: 150px;
   height: 150px;
@@ -77,6 +79,10 @@ section {
   transform: scale(1.05);
 }
 
+.galeria h2 {
+  color: #fff;
+}
+
 /* Formulario */
 form {
   display: flex;
@@ -85,7 +91,9 @@ form {
   max-width: 400px;
   margin: auto;
   padding: 1rem;
-  background: #fff3e0;
+  background: #fff;
+  color: #5d4037;
+  border: 2px solid #f7b3da;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
@@ -98,28 +106,30 @@ input, button {
 }
 
 button {
-  background-color: #ff7043;
-  color: white;
+  background-color: #c6a4e7;
+  color: #7ec6e3;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button:hover {
-  background-color: #e64a19;
+  background-color: #a48fdc;
+  color: #fff;
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #ffe0b2;
+  background-color: #a48fdc;
+  color: #fff;
   font-size: 0.9rem;
 }
 
 /* 📱 Media Queries */
 @media (max-width: 768px) {
   header h1 {
-    font-size: 1.8rem;
+    font-size: 3rem;
   }
 
   .galeria img {
@@ -161,14 +171,16 @@ section {
 section h2 {
   margin-bottom: 1rem;
   font-size: 2rem;
-  color: #ff7043;
+  color: #f7b3da;
 }
 
 .info, .cronograma, .publicaciones {
   padding: 2rem 1rem;
   max-width: 900px;
   margin: auto;
-  background: #fff3e0;
+  background: #fff;
+  color: #5d4037;
+  border: 2px solid #f7b3da;
   border-radius: 10px;
   margin-bottom: 2rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -244,8 +256,9 @@ section h2 {
 }
 
 .card {
-  background-color: #ffe0b2;
+  background-color: #fff;
   padding: 1rem;
+  border: 2px solid #f7b3da;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.2s ease;
