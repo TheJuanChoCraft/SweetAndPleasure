@@ -14,7 +14,7 @@
 
 body {
   font-family: 'Outfit', sans-serif;
-  background: #7ec6e3;
+  background: linear-gradient(to bottom right, #ffe0ec, #fff3e0, #e1f5fe);
   color: #5d4037;
   line-height: 1.6;
 }
@@ -33,11 +33,32 @@ header {
   padding: 2rem;
   background-color: #a48fdc;
   color: #fff;
+  position: relative; /* Necesario para el pseudo-elemento */
+  z-index: 1;
 }
 
 header h1 {
   margin-bottom: 0.5rem;
   font-size: 3rem;
+}
+
+/* Degradado entre header y body */
+header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+  height: 60px;
+  pointer-events: none;
+  z-index: 2;
+  background: linear-gradient(
+    to bottom,
+    rgba(164, 143, 220, 1) 0%,
+    rgba(164, 143, 220, 1) 50%,
+    rgba(255, 224, 236, 0.85) 90%,
+    rgba(255, 224, 236, 0) 100%
+  );
 }
 
 /* Secciones */
@@ -79,10 +100,6 @@ section {
   transform: scale(1.05);
 }
 
-.galeria h2 {
-  color: #fff;
-}
-
 /* Formulario */
 form {
   display: flex;
@@ -91,9 +108,9 @@ form {
   max-width: 400px;
   margin: auto;
   padding: 1rem;
-  background: #fff;
+  background: transparent;
   color: #5d4037;
-  border: 2px solid #f7b3da;
+  border: none;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
@@ -174,16 +191,13 @@ section h2 {
   color: #f7b3da;
 }
 
-.info, .cronograma, .publicaciones {
-  padding: 2rem 1rem;
-  max-width: 900px;
-  margin: auto;
-  background: #fff;
+.info, .cronograma, .publicaciones, form, .card {
+  background: transparent;
+  border: none;
   color: #5d4037;
-  border: 2px solid #f7b3da;
   border-radius: 10px;
   margin-bottom: 2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: none;
 }
 
 .info p, .cronograma li {
