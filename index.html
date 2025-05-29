@@ -8,14 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
   <div class="background-animated">
     <img src="https://cdn-icons-png.freepik.com/256/1066/1066598.png?semt=ais_hybrid" alt="Cupcake" class="bg-cupcake">
-    <img src="data:image/png;base64,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" alt="Churros" class="bg-churros">
-    <img src="https://cdn-icons-png.freepik.com/256/817/817345.png?semt=ais_hybrid" alt="Pie" class="bg-pie">
-    <!-- Nuevas ubicaciones y repeticiones para mayor dinamismo -->
-    <img src="https://cdn-icons-png.freepik.com/256/1066/1066598.png?semt=ais_hybrid" alt="Cupcake" class="bg-cupcake2">
     <img src="data:image/png;base64,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" alt="Churros" class="bg-churros2">
     <img src="https://cdn-icons-png.freepik.com/256/817/817345.png?semt=ais_hybrid" alt="Pie" class="bg-pie2">
     <img src="https://cdn-icons-png.freepik.com/256/1066/1066598.png?semt=ais_hybrid" alt="Cupcake" class="bg-cupcake3">
@@ -30,7 +27,7 @@
 <section class="info">
   <h2 class="delius-swash-caps-regular">📢 Información del Evento</h2>
   <p><strong>@sweetandpleasure</strong></p>
-  <p><strong>Ubicación:</strong> Centro de Convenciones</p>
+  <p><strong>Ubicación:</strong> Universidad del Sinú </p>
   <p><strong>Transmisión en vivo disponible</strong></p>
   <p><strong>Días:</strong> Viernes y Sábado</p>
   <p><strong>Horario:</strong> 8 AM - 6 PM</p>
@@ -91,17 +88,94 @@
   </div>
 </section>
 
-  <section class="galeria">
-    <h2 class="delius-swash-caps-regular">🍮 ¿Qué encontrarás?</h2><br>
-    <div class="imagenes">
-      <img src="https://i.ytimg.com/vi/Yp0jMURMXgk/maxresdefault.jpg" alt="Tarta de fresa">
-      <img src="https://imag.bonviveur.com/cupcakes.jpg" alt="Cupcakes">
-      <img src="https://sarasellos.com/wp-content/uploads/2024/06/churros-2.jpg" alt="Churros">
+  <section class="galeria-descriptiva">
+    <h2 class="delius-swash-caps-regular">🍬 Postres Destacados</h2>
+    <div class="tarjetas-postres">
+      <div class="postre-card">
+        <img src="https://i.ytimg.com/vi/Yp0jMURMXgk/maxresdefault.jpg" alt="Tarta de fresa">
+        <h3>Tarta de Fresa</h3>
+        <p>Suave bizcocho con capas de crema batida y fresas naturales, ideal para amantes del dulce clásico.</p>
+      </div>
+      <div class="postre-card">
+        <img src="https://imag.bonviveur.com/cupcakes.jpg" alt="Cupcakes">
+        <h3>Cupcakes de Vainilla</h3>
+        <p>Pequeñas delicias con cobertura colorida, perfectas para niños y grandes con corazón dulce.</p>
+      </div>
+      <div class="postre-card">
+        <img src="https://sarasellos.com/wp-content/uploads/2024/06/churros-2.jpg" alt="Churros">
+        <h3>Churros con Chocolate</h3>
+        <p>Crujientes por fuera, suaves por dentro, servidos con salsa caliente de chocolate amargo.</p>
+      </div>
     </div>
   </section>
 
+  <section class="acordeon-participantes">
+    <h2 class="delius-swash-caps-regular">👩‍🍳 Participantes Destacados</h2>
+    <div class="books-participantes">
+      <div class="book">
+        <div class="cover">
+          <span>🍓</span>
+          <p>Dulce Tentación</p>
+        </div>
+        <div class="contenido-book">
+          <p>Especialistas en tortas artesanales con ingredientes naturales. Stand 12. Degustación de cheesecake frutales.</p>
+        </div>
+      </div>
+      <div class="book">
+        <div class="cover">
+          <span>🧁</span>
+          <p>Cupcake Lovers</p>
+        </div>
+        <div class="contenido-book">
+          <p>Mini cupcakes de mil sabores. Taller de decoración para niños a las 3 PM. Stand 5.</p>
+        </div>
+      </div>
+      <div class="book">
+        <div class="cover">
+          <span>🍫</span>
+          <p>El Rincón del Cacao</p>
+        </div>
+        <div class="contenido-book">
+          <p>Postres 100% a base de chocolate colombiano. Demostración de bombones artesanales. Stand 7.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quiz-postre">
+  <h2 class="delius-swash-caps-regular">🎯 ¿Qué postre eres tú?</h2>
+  <p>Responde estas 3 preguntas y descubre tu esencia repostera</p>
+
+  <form id="form-quiz">
+    <div class="pregunta">
+      <p>1️⃣ ¿Cuál es tu clima ideal?</p>
+      <label><input type="radio" name="q1" value="fresa" required> Primavera soleada</label><br>
+      <label><input type="radio" name="q1" value="chocolate"> Invierno acogedor</label><br>
+      <label><input type="radio" name="q1" value="cupcake"> Verano vibrante</label>
+    </div>
+
+    <div class="pregunta">
+      <p>2️⃣ Elige una actividad:</p>
+      <label><input type="radio" name="q2" value="cupcake" required> Decorar galletas</label><br>
+      <label><input type="radio" name="q2" value="fresa"> Hacer picnic</label><br>
+      <label><input type="radio" name="q2" value="chocolate"> Leer con una taza caliente</label>
+    </div>
+
+    <div class="pregunta">
+      <p>3️⃣ Tu sabor favorito es:</p>
+      <label><input type="radio" name="q3" value="chocolate" required> Cacao intenso</label><br>
+      <label><input type="radio" name="q3" value="fresa"> Frutal y suave</label><br>
+      <label><input type="radio" name="q3" value="cupcake"> Dulce y colorido</label>
+    </div>
+
+    <button type="submit">Ver resultado 🍬</button>
+  </form>
+
+  <div id="resultado-quiz" class="resultado-oculto"></div>
+</section>
+
   <footer>
-    <p>Organizado por Dulces Eventos © 2025</p>
+    <p>Organizado por la Universidad del Sinú © 2025</p>
   </footer>
 
   <script src="script.js"></script>
