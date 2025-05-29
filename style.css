@@ -61,6 +61,24 @@ header::after {
   );
 }
 
+/* Degradado entre body y footer */
+.degrade-footer {
+  height: 60px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  margin-bottom: -30px;
+  pointer-events: none;
+  /* El degradado igual al header pero invertido */
+  background: linear-gradient(
+    to top,
+    #a48fdc 0%,
+    #a48fdc 50%,
+    rgba(255, 224, 236, 0.85) 90%,
+    rgba(255, 224, 236, 0) 100%
+  );
+}
+
 /* Secciones */
 section {
   padding: 2rem 1rem;
@@ -742,4 +760,70 @@ section h2 {
 
 .resultado-oculto {
   display: none;
+}
+
+.mapa-evento {
+  padding: 2rem 1rem;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.contenedor-mapa {
+  margin-top: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.footer-contacto {
+  background-color: #a48fdc;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.contenido-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: auto;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer-contacto h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #ffe0ec;
+}
+
+.footer-contacto p {
+  margin: 0.2rem 0;
+}
+
+.redes-sociales a {
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0 0.5rem;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.redes-sociales a:hover {
+  transform: scale(1.2);
+  color: #ffe0ec;
+}
+
+.copy {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive layout */
+@media (min-width: 600px) {
+  .contenido-footer {
+    flex-direction: row;
+    text-align: left;
+  }
 }
