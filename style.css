@@ -143,6 +143,139 @@ footer {
   font-size: 0.9rem;
 }
 
+/* Fondo animado de imágenes */
+.background-animated {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.background-animated img {
+  position: absolute;
+  opacity: 0.13;
+  width: 140px;
+  height: auto;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Animaciones individuales para cada imagen */
+.bg-cupcake {
+  top: 10%;
+  left: 5%;
+  animation-name: moveCupcake;
+  animation-duration: 18s;
+}
+
+.bg-churros {
+  top: 60%;
+  left: 80%;
+  animation-name: moveChurros;
+  animation-duration: 22s;
+}
+
+.bg-pie {
+  top: 40%;
+  left: 50%;
+  animation-name: movePie;
+  animation-duration: 25s;
+}
+
+.background-animated img.bg-cupcake2 {
+  top: 75%;
+  left: 10%;
+  animation-name: moveCupcake2;
+  animation-duration: 19s;
+}
+.background-animated img.bg-churros2 {
+  top: 20%;
+  left: 70%;
+  animation-name: moveChurros2;
+  animation-duration: 21s;
+}
+.background-animated img.bg-pie2 {
+  top: 80%;
+  left: 60%;
+  animation-name: movePie2;
+  animation-duration: 24s;
+}
+.background-animated img.bg-cupcake3 {
+  top: 50%;
+  left: 30%;
+  animation-name: moveCupcake3;
+  animation-duration: 16s;
+}
+.background-animated img.bg-churros3 {
+  top: 30%;
+  left: 20%;
+  animation-name: moveChurros3;
+  animation-duration: 20s;
+}
+.background-animated img.bg-pie3 {
+  top: 10%;
+  left: 55%;
+  animation-name: movePie3;
+  animation-duration: 23s;
+}
+
+@keyframes moveCupcake {
+  0% { transform: translateY(0) scale(1) rotate(-8deg);}
+  50% { transform: translateY(40px) scale(1.08) rotate(8deg);}
+  100% { transform: translateY(0) scale(1) rotate(-8deg);}
+}
+
+@keyframes moveChurros {
+  0% { transform: translateY(0) scale(1) rotate(6deg);}
+  50% { transform: translateY(-50px) scale(1.1) rotate(-6deg);}
+  100% { transform: translateY(0) scale(1) rotate(6deg);}
+}
+
+@keyframes movePie {
+  0% { transform: translateX(0) scale(1) rotate(0deg);}
+  50% { transform: translateX(-60px) scale(1.07) rotate(12deg);}
+  100% { transform: translateX(0) scale(1) rotate(0deg);}
+}
+
+/* Animaciones adicionales */
+@keyframes moveCupcake2 {
+  0% { transform: translateY(0) scale(1) rotate(10deg);}
+  50% { transform: translateY(-30px) scale(1.1) rotate(-10deg);}
+  100% { transform: translateY(0) scale(1) rotate(10deg);}
+}
+@keyframes moveChurros2 {
+  0% { transform: translateX(0) scale(1) rotate(-5deg);}
+  50% { transform: translateX(40px) scale(1.08) rotate(5deg);}
+  100% { transform: translateX(0) scale(1) rotate(-5deg);}
+}
+@keyframes movePie2 {
+  0% { transform: translateY(0) scale(1) rotate(0deg);}
+  50% { transform: translateY(35px) scale(1.07) rotate(-12deg);}
+  100% { transform: translateY(0) scale(1) rotate(0deg);}
+}
+@keyframes moveCupcake3 {
+  0% { transform: translateX(0) scale(1) rotate(-8deg);}
+  50% { transform: translateX(-30px) scale(1.05) rotate(8deg);}
+  100% { transform: translateX(0) scale(1) rotate(-8deg);}
+}
+@keyframes moveChurros3 {
+  0% { transform: translateY(0) scale(1) rotate(6deg);}
+  50% { transform: translateY(25px) scale(1.1) rotate(-6deg);}
+  100% { transform: translateY(0) scale(1) rotate(6deg);}
+}
+@keyframes movePie3 {
+  0% { transform: translateX(0) scale(1) rotate(0deg);}
+  50% { transform: translateX(30px) scale(1.07) rotate(12deg);}
+  100% { transform: translateX(0) scale(1) rotate(0deg);}
+}
+
+/* Asegura que el contenido principal esté por encima del fondo animado */
+body > *:not(.background-animated) {
+  position: relative;
+  z-index: 1;
+}
+
 /* 📱 Media Queries */
 @media (max-width: 768px) {
   header h1 {
